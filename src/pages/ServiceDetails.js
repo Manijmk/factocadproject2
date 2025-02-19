@@ -5,6 +5,7 @@ import { ArrowLeft } from 'react-bootstrap-icons';
 import { Link } from 'react-router-dom';
 import bgimage from '../assets/images/bg-3.jpg';
 import metalstampingimg from '../assets/images/Metalstamping.jpg';
+import { useEffect } from 'react';
 
 const serviceDetails = {
   'digital-manufacturing': {
@@ -76,6 +77,12 @@ const serviceDetails = {
 };
 
 export default function ServiceDetail() {
+
+  useEffect(() => {
+    // Check if this is causing the scroll
+    window.scrollTo(0, 0); // Ensure the page scrolls to the top on mount
+  }, []);
+
   const { serviceId } = useParams();
   const service = serviceDetails[serviceId];
 

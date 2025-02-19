@@ -3,25 +3,31 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { Gear, Robot, Person } from 'react-bootstrap-icons';
 import { useInView } from 'react-intersection-observer';
 import { Link } from 'react-router-dom';
+import Bgimage from '../assets/images/bg-2.jpg';
+import StaffImg from '../assets/images/staffing-1.jpg';
+import RobotMfgImg from '../assets/images/bg-4.png'
 
 const services = [
     {
         id: 'digital-manufacturing',
         icon: <Gear />,
         title: "Digital Manufacturing",
-        desc: "End-to-end engineering solutions from concept to production"
+        desc: "End-to-end engineering solutions from concept to production",
+        bgImage : Bgimage,
     },
     {
         id: 'staffing-consulting',
         icon: <Person />,
         title: "Staffing & Consulting",
-        desc: "Skill-set Upgradation Programs"
+        desc: "Skill-set Upgradation Programs",
+        bgImage : StaffImg,
     },
     {
         id: 'robotic-integration',
         icon: <Robot />,
         title: "Lean Manufacturing",
-        desc: "Advanced robotic systems implementation"
+        desc: "Advanced robotic systems implementation",
+        bgImage : RobotMfgImg,
     },
     // {
     //     id: 'tooling-design',
@@ -51,10 +57,20 @@ export default function Services() {
                                 to={`/services/${service.id}`}
                                 className="text-decoration-none"
                             >
-                                <div className="service-card">
-                                    <div className="service-icon">{service.icon}</div>
-                                    <h3>{service.title}</h3>
-                                    <p>{service.desc}</p>
+                               <div
+                                    className="service-card"
+                                    style={{
+                                        background: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${service.bgImage})`,
+                                        backgroundSize: 'cover',
+                                        minHeight: '300px'
+                                      }}
+                                >
+                                    <div className="service-overlay"></div>
+                                    <div className="service-content">
+                                        <div className="service-icon">{service.icon}</div>
+                                        <h3>{service.title}</h3>
+                                        <p>{service.desc}</p>
+                                    </div>
                                 </div>
                             </Link>
                         </Col>

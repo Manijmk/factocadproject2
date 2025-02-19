@@ -5,6 +5,7 @@ import ServiceDetail from './pages/ServiceDetails';
 import AboutUs from './components/AboutUs';
 import CustomNavbar from './components/Navbar';
 import Footer from './components/Footer';
+import Career from './components/Career';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/services/:serviceId" element={<ServiceDetail />} />
         <Route path='/about' element={<AboutUs />} />
+        <Route path='/career' element={<Career />} />
       </Routes>
       <CustomNavbar />
       <Footer />
