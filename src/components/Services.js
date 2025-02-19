@@ -1,6 +1,6 @@
 // components/Services.js
 import { Container, Row, Col } from 'react-bootstrap';
-import { Gear, Cpu, Robot, Tools, Person } from 'react-bootstrap-icons';
+import { Gear, Robot, Person } from 'react-bootstrap-icons';
 import { useInView } from 'react-intersection-observer';
 import { Link } from 'react-router-dom';
 
