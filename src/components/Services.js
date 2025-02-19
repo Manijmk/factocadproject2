@@ -1,6 +1,6 @@
 // components/Services.js
 import { Container, Row, Col } from 'react-bootstrap';
-import { Gear, Cpu, Robot, Tools } from 'react-bootstrap-icons';
+import { Gear, Cpu, Robot, Tools, Person } from 'react-bootstrap-icons';
 import { useInView } from 'react-intersection-observer';
 import { Link } from 'react-router-dom';
 
@@ -12,23 +12,23 @@ const services = [
         desc: "End-to-end engineering solutions from concept to production"
     },
     {
-        id: 'automation-systems',
-        icon: <Cpu />,
-        title: "Automation Systems",
-        desc: "Custom industrial automation solutions"
+        id: 'staffing-consulting',
+        icon: <Person />,
+        title: "Staffing & Consulting",
+        desc: "Skill-set Upgradation Programs"
     },
     {
         id: 'robotic-integration',
         icon: <Robot />,
-        title: "Robotic Integration",
+        title: "Lean Manufacturing",
         desc: "Advanced robotic systems implementation"
     },
-    {
-        id: 'tooling-design',
-        icon: <Tools />,
-        title: "Tooling Design",
-        desc: "Precision tooling and fixture development"
-    }
+    // {
+    //     id: 'tooling-design',
+    //     icon: <Tools />,
+    //     title: "Tooling Design",
+    //     desc: "Precision tooling and fixture development"
+    // }
 ];
 
 export default function Services() {
@@ -46,7 +46,7 @@ export default function Services() {
                 <h2 className="section-title mb-5">Our Services</h2>
                 <Row className="g-4">
                     {services.map((service) => (
-                        <Col md={6} lg={3} key={service.id}>
+                        <Col md={6} lg={4} key={service.id}>
                             <Link
                                 to={`/services/${service.id}`}
                                 className="text-decoration-none"

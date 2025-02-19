@@ -43,7 +43,7 @@ export default function Counter() {
   });
 
   return (
-    <section id="counter" className="py-5 bg-dark" ref={ref}>
+    <section id="counter" className="py-5" ref={ref}>
       <Container>
         <Row className="g-4">
           {counters.map((counter) => (
