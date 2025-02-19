@@ -22,9 +22,11 @@ export default function Footer() {
           <Col md={4}>
             <h4>Contact Info</h4>
             <ul className="contact-info">
-              <li>Phone: +1 (123) 456-7890</li>
-              <li>Email: info@factocad.com</li>
-              <li>Address: 123 Industrial Way, Manufacturing City, USA</li>
+              <li> FACTOCAD ROBOTICS AND AUTOMATION INDIA PVT LTD </li>
+              <li>Email: sales@factocad-robotics.com</li>
+              <li>Address: No.941,pasumpon nagar ,kilpudhupakkam salai,</li>
+              <li>Near cheyyar sipcot industrial park </li>
+              <li>Cheyyar -604407, TamilNadu, India </li>
             </ul>
           </Col>
         </Row>

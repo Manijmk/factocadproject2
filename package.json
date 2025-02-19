@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.16.7",
+    "@babel/preset-env": "^7.16.7",
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.3",
     "cra-template": "1.2.0",
@@ -16,9 +18,7 @@
     "react-router-dom": "^6.29.0",
     "react-scripts": "5.0.1",
     "react-scroll-parallax": "^3.4.5",
-    "web-vitals": "^4.2.4",
-    "@babel/plugin-proposal-private-property-in-object" : "^7.16.7",
-    "@babel/preset-env": "^7.16.7"
+    "web-vitals": "^4.2.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -43,5 +43,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint-plugin-react": "^7.37.4"
   }
 }
