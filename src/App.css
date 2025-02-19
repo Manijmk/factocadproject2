@@ -419,3 +419,69 @@ body {
 .counter-item p {
   color: var(--light-text);
 }
+
+/* About Us Page */
+.about-us {
+  background-color: #ffffff;
+}
+
+.intro-section {
+  background-color: #f8f9fa;
+}
+
+.key-points-section {
+  background-color: #ffffff;
+}
+
+.technical-section {
+  background-color: #f8f9fa;
+}
+
+.philosophy-section {
+  background-color: #ffffff;
+}
+
+.icon-wrapper {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.card {
+  transition: transform 0.3s ease;
+  border: none;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.list-group-item {
+  border-color: rgba(0,0,0,0.1);
+  background-color: transparent;
+}
+
+blockquote {
+  font-size: 1.1rem;
+  border-left: 4px solid #ffffff;
+  padding-left: 1.5rem;
+}
+
+.border-rounded {
+  border-radius: 8px;
+}
+
+/* Subtle Background Changes */
+.intro-section,
+.technical-section {
+  background-color: #f8f9fa;
+}
+
+.key-points-section,
+.philosophy-section {
+  background-color: #ffffff;
+}

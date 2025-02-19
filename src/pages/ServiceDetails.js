@@ -82,7 +82,7 @@ export default function ServiceDetail() {
   if (!service) return <div>Service not found</div>;
 
   return (
-    <section className="service-detail-section py-5">
+    <section className="service-detail-section py-5 mt-5">
       <Container>
         <Button
           as={Link}

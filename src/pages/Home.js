@@ -14,7 +14,7 @@ export default function Home() {
     return (
         <ParallaxProvider>
             <div className="industrial-theme">
-                <Navbar />
+                {/* <Navbar /> */}
                 <Hero />
                 <About />
                 <Services />
@@ -22,7 +22,7 @@ export default function Home() {
                 <Industries />
                 <Counter />
                 <Contact />
-                <Footer />
+                {/* <Footer /> */}
             </div>
         </ParallaxProvider>
     );

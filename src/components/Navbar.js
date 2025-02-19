@@ -21,7 +21,7 @@ export default function CustomNavbar() {
             <Nav.Link as={Link} to="#services">Services</Nav.Link>
             <Nav.Link as={Link} to="#capabilities">Company</Nav.Link>
             <Nav.Link as={Link} to="#industries">Career</Nav.Link>
-            <Nav.Link as={Link} to="#aboutus">About Us</Nav.Link>
+            <Nav.Link as={Link} to="/about">About Us</Nav.Link>
             <Nav.Link as={Link} to="#contact">Contact Us</Nav.Link>
           </Nav>
         </Navbar.Collapse>
