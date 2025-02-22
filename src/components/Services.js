@@ -23,7 +23,7 @@ const services = [
         bgImage : StaffImg,
     },
     {
-        id: 'robotic-integration',
+        id: 'lean-manufacturing',
         icon: <Robot />,
         title: "Lean Manufacturing",
         desc: "Advanced robotic systems implementation",
