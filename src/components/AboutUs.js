@@ -6,7 +6,7 @@
 //     <section className="about-us py-5">
 //       <Container>
 //         <h1 className="display-4 text-primary text-center    mb-5">Who Are We</h1>
-        
+
 //         {/* Introduction Section */}
 //         <Row className="mb-5">
 //           <Col lg={8} className="mx-auto text-center">
@@ -80,7 +80,7 @@
 //               <li className="mb-3">Technical Documentation</li>
 //             </ul>
 //           </Col>
-          
+
 //           <Col lg={6}>
 //             <h3 className="text-primary mb-4">
 //               <Diagram3 className="me-2" />
@@ -125,8 +125,15 @@
 import { Container, Row, Col, Card, ListGroup } from 'react-bootstrap';
 import { Gear, People, ShieldCheck, Lightning, Diagram3 } from 'react-bootstrap-icons';
 import AboutImage from '../assets/images/bg-4.png'; // Add your image here
+import { useEffect } from 'react';
 
 export default function AboutUs() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Ensure the page scrolls to the top on mount
+  }, []);
+
+
   return (
     <section className="about-us">
       {/* Introduction Section */}
@@ -134,20 +141,20 @@ export default function AboutUs() {
         <Container>
           <Row className="align-items-center">
             <Col lg={6}>
-              <img 
-                src={AboutImage} 
-                alt="About Factocad" 
+              <img
+                src={AboutImage}
+                alt="About Factocad"
                 className="img-fluid rounded shadow"
               />
             </Col>
             <Col lg={6} className="mt-4 mt-lg-0">
               <h1 className="display-4 text-primary mb-4">Who Are We?</h1>
               <p className="lead">
-                Factocad Robotics and Automation India Pvt Ltd is a fast-growing digital manufacturing 
+                Factocad Robotics and Automation India Pvt Ltd is a fast-growing digital manufacturing
                 engineering solutions provider for automotive, aerospace, and locomotive manufacturers.
               </p>
               <p>
-                We specialize in complete manufacturing automation lifecycle management, from planning 
+                We specialize in complete manufacturing automation lifecycle management, from planning
                 to post-commissioning, with a focus on BIW/Locomotive weld lines and robotic systems.
               </p>
             </Col>
@@ -258,7 +265,7 @@ export default function AboutUs() {
             <Card.Body>
               <blockquote className="blockquote mb-0">
                 <p className="lead">
-                  "Our engagement is based on mutual trust and value creation. We listen to our customers' 
+                  "Our engagement is based on mutual trust and value creation. We listen to our customers'
                   challenges and deploy the right engineering expertise where it matters most."
                 </p>
               </blockquote>

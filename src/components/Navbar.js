@@ -19,7 +19,7 @@ export default function CustomNavbar() {
         <Navbar.Collapse id="main-nav" className="justify-content-end">
           <Nav>
             <Nav.Link as={Link} to="#services">Services</Nav.Link>
-            <Nav.Link as={Link} to="#capabilities">Company</Nav.Link>
+            {/* <Nav.Link as={Link} to="#capabilities">Company</Nav.Link> */}
             <Nav.Link as={Link} to="/career">Career</Nav.Link>
             <Nav.Link as={Link} to="/about">About Us</Nav.Link>
             <Nav.Link as={Link} to="#contact">Contact Us</Nav.Link>
