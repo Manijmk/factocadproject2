@@ -9,6 +9,11 @@ import Career from './components/Career';
 import LeanManufacturing from './components/LeanManufacturing';
 import StaffingConsulting from './components/StaffingConsulting';
 import DigitalManufacturing from './components/DigitalManufacturing';
+import BodyInWhite from './components/BodyInWhite';
+import MetalStamping from './components/MetalStmping';
+import AssemblyEngineering from './components/AssemblyEngineering';
+import LayoutPlanning from './components/LayoutPlanning';
+import TechnicalDocumentation from './components/TechnicalDocumentation';
 
 
 function App() {
@@ -23,6 +28,11 @@ function App() {
         <Route path="/services/digital-manufacturing" element={<DigitalManufacturing />} />
         <Route path="/services/staffing-consulting" element={<StaffingConsulting />} />
         <Route path="/services/lean-manufacturing" element={<LeanManufacturing />} />
+        <Route path="/digital-manufacturing/body-in-white" element={<BodyInWhite />} />
+        <Route path="/digital-manufacturing/metal-stamping" element={<MetalStamping />} />
+        <Route path="/digital-manufacturing/assembly-engineering" element={<AssemblyEngineering />} />
+        <Route path="/digital-manufacturing/3d-layout-planning" element={<LayoutPlanning />} />
+        <Route path="/digital-manufacturing/technical-documentation" element={<TechnicalDocumentation />} />
       </Routes>
       <CustomNavbar />
       <Footer />
