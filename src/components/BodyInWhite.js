@@ -4,6 +4,11 @@ import { ArrowLeft } from 'react-bootstrap-icons';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import bodyInWhiteImg from '../assets/images/BodyInWhite.png'; // Image for Body in White
+import processPlanningImg from '../assets/images/process-planning.jpg'; // Image for Process Planning
+import fixtureDesignImg from '../assets/images/fixture-design.jpg'; // Image for Fixture Design
+import robotSimulationImg from '../assets/images/robot-simulation.jpg'; // Image for Robot Simulation
+import draftingDetailingImg from '../assets/images/cadautomation.png'; // Image for Drafting & Detailing
+import technicalDocumentationImg from '../assets/images/technical-documentation.png'; // Image for Technical Documentation
 import './BodyInWhite.css'; // Custom CSS for this component
 
 export default function BodyInWhite() {
@@ -14,6 +19,7 @@ export default function BodyInWhite() {
   const content = [
     {
       subTopic: "PROCESS PLANNING & DESIGN",
+      image: processPlanningImg,
       items: [
         "Production Volume − Takt Time Calculations",
         "Part Study − Part Build ups",
@@ -31,6 +37,7 @@ export default function BodyInWhite() {
     },
     {
       subTopic: "FIXTURE DESIGN",
+      image: fixtureDesignImg,
       items: [
         "Production Tooling",
         "Gripper Design",
@@ -52,6 +59,7 @@ export default function BodyInWhite() {
     },
     {
       subTopic: "ROBOT SIMULATION",
+      image: robotSimulationImg,
       items: [
         "Pre-engineering Work cell",
         "Parts Placement and Part Orientation",
@@ -73,6 +81,7 @@ export default function BodyInWhite() {
     },
     {
       subTopic: "DRAFTING & DETAILING",
+      image: draftingDetailingImg,
       items: [
         "Detailed Manufacturing Drawings",
         "Bill of materials",
@@ -84,6 +93,7 @@ export default function BodyInWhite() {
     },
     {
       subTopic: "TECHNICAL DOCUMENTATION",
+      image: technicalDocumentationImg,
       items: [
         "Pneumatic clamping valve sequence Design",
         "Ergonomic Studies",
@@ -99,6 +109,58 @@ export default function BodyInWhite() {
   ];
 
   return (
+    // <section className="body-in-white-difacto">
+    //   <div
+    //     className="hero-section-difacto"
+    //     style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${bodyInWhiteImg})` }}
+    //   >
+    //     <Container>
+    //       <Button
+    //         as={Link}
+    //         to="/digital-manufacturing"
+    //         variant="light"
+    //         className="back-to-services-btn-difacto"
+    //       >
+    //         <ArrowLeft className="me-2" /> Back to Digital Manufacturing
+    //       </Button>
+    //       <h1 className="hero-title-difacto">Body in White</h1>
+    //       <p className="hero-subtitle-difacto">
+    //         Comprehensive solutions for body-in-white manufacturing processes.
+    //       </p>
+    //     </Container>
+    //   </div>
+
+    //   <Container className="content-section-difacto">
+    //     {content.map((section, index) => (
+    //       <div
+    //         key={index}
+    //         className="content-block-difacto"
+    //         style={{ background: index % 2 === 0 ? 'rgba(255, 255, 255, 0.1)' : 'rgba(255, 255, 255, 0.1)' }}
+    //       >
+    //         <Row className="align-items-center">
+    //           <Col md={7}>
+    //             <h3 className="content-title-difacto">{section.subTopic}</h3>
+    //             <ul className="content-list-difacto">
+    //               {section.items.map((item, idx) => (
+    //                 <li key={idx}>{item}</li>
+    //               ))}
+    //             </ul>
+    //           </Col>
+    //           <Col md={5}>
+    //             <div className="image-container-difacto">
+    //               <img
+    //                 src={section.image}
+    //                 alt={section.subTopic}
+    //                 className="content-image-difacto"
+    //               />
+    //             </div>
+    //           </Col>
+    //         </Row>
+    //       </div>
+    //     ))}
+    //   </Container>
+    // </section>
+
     <section className="body-in-white-difacto">
       {/* Hero Section */}
       <div
@@ -124,13 +186,30 @@ export default function BodyInWhite() {
       {/* Content Section */}
       <Container className="content-section-difacto">
         {content.map((section, index) => (
-          <div key={index} className="content-block-difacto">
-            <h3>{section.subTopic}</h3>
-            <ul>
-              {section.items.map((item, idx) => (
-                <li key={idx}>{item}</li>
-              ))}
-            </ul>
+          <div
+            key={index}
+            className="content-block-difacto"
+            style={{ background: index % 2 === 0 ? 'rgba(255, 255, 255, 0.1)' : 'rgba(255, 255, 255, 0.1)' }}
+          >
+            <Row className="align-items-center">
+              <Col md={7}>
+                <h3 className="content-title-difacto">{section.subTopic}</h3>
+                <ul className="content-list-difacto">
+                  {section.items.map((item, idx) => (
+                    <li key={idx}>{item}</li>
+                  ))}
+                </ul>
+              </Col>
+              <Col md={5}>
+                <div className="image-container-difacto">
+                  <img
+                    src={section.image}
+                    alt={section.subTopic}
+                    className="content-image-difacto"
+                  />
+                </div>
+              </Col>
+            </Row>
           </div>
         ))}
       </Container>

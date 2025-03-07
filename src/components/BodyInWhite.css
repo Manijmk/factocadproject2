@@ -1,88 +1,160 @@
 /* BodyInWhite.css */
 .body-in-white-difacto {
-    background-color: #f9f9f9;
+  background-color: #f9f9f9;
+}
+
+/* Hero Section */
+.hero-section-difacto {
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+  position: relative;
+}
+
+.hero-section-difacto::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
+  z-index: 1;
+}
+
+.hero-title-difacto {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-subtitle-difacto {
+  font-size: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.back-to-services-btn-difacto {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  color: #2c3e50;
+  transition: background-color 0.3s ease;
+  z-index: 2;
+}
+
+.back-to-services-btn-difacto:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+/* Content Section */
+.content-section-difacto {
+  padding: 80px 0;
+}
+
+.content-block-difacto {
+  padding: 40px;
+  margin-bottom: 40px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-block-difacto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.content-title-difacto {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.content-title-difacto::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #e67e22, #d35400);
+  border-radius: 2px;
+}
+
+.content-list-difacto {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.content-list-difacto li {
+  font-size: 1.1rem;
+  color: #34495e;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.content-list-difacto li:hover {
+  color: #e67e22;
+}
+
+.image-container-difacto {
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.content-image-difacto {
+  width: 100%;
+  height: 300px; /* Fixed height for consistency */
+  object-fit: cover;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.content-image-difacto:hover {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-title-difacto {
+    font-size: 2.5rem;
   }
-  
-  .hero-section-difacto {
-    height: 400px;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff;
+
+  .hero-subtitle-difacto {
+    font-size: 1.2rem;
+  }
+
+  .content-block-difacto {
     padding: 20px;
   }
-  
-  .hero-title-difacto {
-    font-size: 3.5rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  }
-  
-  .hero-subtitle-difacto {
-    font-size: 1.5rem;
-    max-width: 800px;
-    margin: 0 auto;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  }
-  
-  .back-to-services-btn-difacto {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border: none;
-    color: #2c3e50;
-    transition: background-color 0.3s ease;
-  }
-  
-  .back-to-services-btn-difacto:hover {
-    background-color: rgba(255, 255, 255, 1);
-  }
-  
-  .content-section-difacto {
-    padding: 60px 0;
-  }
-  
-  .content-block-difacto {
-    margin-bottom: 40px;
-  }
-  
-  .content-block-difacto h3 {
+
+  .content-title-difacto {
     font-size: 2rem;
-    color: #2c3e50;
-    margin-bottom: 20px;
   }
-  
-  .content-block-difacto ul {
-    list-style-type: disc;
-    padding-left: 20px;
+
+  .content-list-difacto li {
+    font-size: 1rem;
   }
-  
-  .content-block-difacto ul li {
-    font-size: 1.1rem;
-    color: #34495e;
-    margin-bottom: 10px;
+
+  .content-image-difacto {
+    height: 200px; /* Adjust height for smaller screens */
   }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .hero-title-difacto {
-      font-size: 2.5rem;
-    }
-  
-    .hero-subtitle-difacto {
-      font-size: 1.2rem;
-    }
-  
-    .content-block-difacto h3 {
-      font-size: 1.8rem;
-    }
-  
-    .content-block-difacto ul li {
-      font-size: 1rem;
-    }
-  }
+}
