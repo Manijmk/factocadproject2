@@ -300,59 +300,60 @@ export default function DigitalManufacturing() {
 
   return (
     <section className="digital-manufacturing-difacto">
-      {/* Hero Section */}
-      <div
-        className="hero-section-difacto"
-        style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${factoryImg})` }}
-      >
-        <Container>
-          <Button
-            as={Link}
-            to="/"
-            variant="light"
-            className="back-to-services-btn-difacto"
-          >
-            <ArrowLeft className="me-2" /> Back to Services
-          </Button>
-          <h1 className="hero-title-difacto">Digital Manufacturing</h1>
-          <p className="hero-subtitle-difacto">
-            Transforming industries with cutting-edge digital manufacturing solutions.
-          </p>
-        </Container>
-      </div>
-
-      {/* Overview Section */}
-      <Container className="overview-section-difacto">
-        <h2 className="overview-title-difacto">Overview</h2>
-        <p className="overview-text-difacto">
-          Digital manufacturing integrates advanced technologies to optimize production processes, reduce costs, and improve efficiency. Our solutions cover a wide range of services, including body-in-white, metal stamping, assembly engineering, 3D layout planning, and technical documentation.
+    {/* Hero Section */}
+    <div
+      className="hero-section-difacto"
+      style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${factoryImg})` }}
+    >
+      <Container>
+        <Button
+          as={Link}
+          to="/"
+          variant="light"
+          className="back-to-services-btn-difacto"
+        >
+          <ArrowLeft className="me-2" /> Back to Services
+        </Button>
+        <h1 className="hero-title-difacto">Digital Manufacturing</h1>
+        <p className="hero-subtitle-difacto">
+          Transforming industries with cutting-edge digital manufacturing solutions.
         </p>
       </Container>
+    </div>
 
-      {/* Cards Section */}
-      <Container className="cards-section-difacto">
-        <Row className="g-4">
-          {topics.map((topic, index) => (
-            <Col md={4} key={index}>
-              <Link
-                to={`/digital-manufacturing/${topic.id}`}
-                className="text-decoration-none"
-              >
-                <Card className="service-card-difacto">
-                  <div
-                    className="card-image-difacto"
-                    style={{ backgroundImage: `url(${topic.image})` }}
-                  />
-                  <Card.Body>
+    {/* Overview Section */}
+    <Container className="overview-section-difacto">
+      <h2 className="overview-title-difacto">Overview</h2>
+      <p className="overview-text-difacto">
+        Digital manufacturing integrates advanced technologies to optimize production processes, reduce costs, and improve efficiency. Our solutions cover a wide range of services, including body-in-white, metal stamping, assembly engineering, 3D layout planning, and technical documentation.
+      </p>
+    </Container>
+
+    {/* Cards Section */}
+    <Container className="cards-section-difacto">
+      <Row className="g-4">
+        {topics.map((topic, index) => (
+          <Col md={4} key={index}>
+            <Link
+              to={`/digital-manufacturing/${topic.id}`}
+              className="text-decoration-none"
+            >
+              <Card className="service-card-difacto">
+                <div
+                  className="card-image-difacto"
+                  style={{ backgroundImage: `url(${topic.image})` }}
+                >
+                  <div className="card-overlay-difacto">
                     <h3>{topic.title}</h3>
                     <p>{topic.description}</p>
-                  </Card.Body>
-                </Card>
-              </Link>
-            </Col>
-          ))}
-        </Row>
-      </Container>
-    </section>
+                  </div>
+                </div>
+              </Card>
+            </Link>
+          </Col>
+        ))}
+      </Row>
+    </Container>
+  </section>
   );
 }

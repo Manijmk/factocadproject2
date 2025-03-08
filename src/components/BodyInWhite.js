@@ -189,7 +189,6 @@ export default function BodyInWhite() {
           <div
             key={index}
             className="content-block-difacto"
-            style={{ background: index % 2 === 0 ? 'rgba(255, 255, 255, 0.1)' : 'rgba(255, 255, 255, 0.1)' }}
           >
             <Row className="align-items-center">
               <Col md={7}>
